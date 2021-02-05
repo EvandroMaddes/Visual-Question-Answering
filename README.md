@@ -1,7 +1,8 @@
 # Visual-Question-Answering
 https://www.kaggle.com/c/anndl-2020-vqa
 
-REPORT THIRD HOMEWORK: VISUAL QUESTION ANSWERING
+REPORT THIRD HOMEWORK: VISUAL QUESTION ANSWERING 
+
 We started from the notebook on recurrent neural networks seen at the exercise session with prof.
 Lattari, along with all the precedents.
 We wrote the code to obtain the dictionary in order to encode answers and questions.
@@ -14,7 +15,8 @@ Data is split in a stratified fashion, using answers as the class labels.
 We tried different combinations of image dimension and batch size during training in order to have a
 good trade off between fitting of the model and time spent for each epoch.
 To obtain an efficient model we tried different architectures :
-  ● Custom model:we won’t directly use the image as input into the model. The image is scaled
+
+● Custom model:we won’t directly use the image as input into the model. The image is scaled
   to 200×350. The scaled image is fed into a convolutional neural network (CNN) such as
   VGG-16 which outputs a feature vector encoding the contents of the image and is referred
   to as an image embedding. The question is fed into an embedding layer, resulting in a
@@ -26,11 +28,13 @@ To obtain an efficient model we tried different architectures :
   nonlinearity at the end that outputs a score distribution over each of the 58 answers.
   Converting the answers to a 58-way classification task allows us to train the VQA model
   using a cross-entropy loss between the generated answer distribution and the ground truth.
-  ● Co-attention: this model implements a mechanism that jointly reasons for visual attention
+  
+● Co-attention: this model implements a mechanism that jointly reasons for visual attention
   and question attention. More specifically, the image representation is used to guide the
   question attention and the question representation(s) are used to guide image attention. It
   attends to the image and question simultaneously; we connected the image and question by
   calculating the similarity between image and question features.
+
 We noticed an unbalanced situation on the training set regarding the different labels so we
 computed a weighted loss giving more importance to the less frequent answers (weights inversely
 proportional to class frequency).
