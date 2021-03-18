@@ -42,3 +42,9 @@ get the best results. We also set a scheduler for the learning rate based on the
 at the end we did not use it. The value of parameters of these functions are mainly based on the
 current learning rate and on the number of parameters of the entire model.
 
+Authors:
+- [Federico Innocente](https://github.com/InnocenteFederico)
+- [Francesco Masciulli](https://github.com/FraqMasq)
+- [Federico Morreale](https://github.com/fedy97)
+- [Evandro Maddes](https://github.com/EvandroMaddes)
+
